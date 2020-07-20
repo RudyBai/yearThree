@@ -1,0 +1,9 @@
+rmic PartOne.CloudCoverageServer
+rmic PartOne.HumidityTemperatureServer
+
+start rmiregistry -J-Djava.rmi.server.hostname=localhost
+
+start java PartOne.CloudCoverageServer
+start java PartOne.HumidityTemperatureServer
+
+start java PartOne.Client
